@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Mail 📬 &amp; Team Number — Virtual Numbers &amp; E-mail Verification</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <script>
+    // Configure Tailwind theme tokens for dark obsidian, gold-amber, emerald, and indigo accents
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            obsidian: {
+              950: '#05070d',
+              900: '#090d16',
+              800: '#0f1626',
+              700: '#172136',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            },
+            emeraldLux: {
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+            },
+            indigoLux: {
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    /* Ultra-premium dark obsidian mesh backdrop & glassmorphic card surfaces */
+    html, body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #05070d;
+      color: #f8fafc;
+      overflow-x: hidden;
+      background-image:
+        radial-gradient(circle at 12% 8%, rgba(245, 158, 11, 0.14), transparent 36%),
+        radial-gradient(circle at 88% 12%, rgba(99, 102, 241, 0.16), transparent 40%),
+        radial-gradient(circle at 50% 85%, rgba(16, 185, 129, 0.10), transparent 45%);
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .glass-panel {
+      background: linear-gradient(155deg, rgba(17, 24, 41, 0.88), rgba(9, 13, 22, 0.92));
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      box-shadow: 0 20px 45px -20px rgba(0, 0, 0, 0.75);
+    }
+
+    .glass-sub {
+      background: rgba(15, 22, 38, 0.72);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .service-icon svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.28s ease;
+    }
+
+    .accordion-item.open .accordion-content {
+      max-height: 360px;
+    }
+
+    .accordion-item.open .accordion-chevron {
+      transform: rotate(180deg);
+    }
+
+    .accordion-chevron {
+      transition: transform 0.2s ease;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col text-slate-100 antialiased">
+  <!-- Top Toast Notification Banner -->
+  <div id="toast-banner" role="status" aria-live="polite" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-md hidden">
+    <div id="toast-inner" class="px-4 py-3 rounded-xl shadow-2xl border text-xs sm:text-sm font-medium flex items-center justify-between gap-3 bg-obsidian-800 text-slate-100 border-gold-500/40">
+      <span id="toast-message">Ready</span>
+      <button type="button" data-action="dismiss-toast" aria-label="Dismiss notification" class="text-xs font-bold opacity-80 hover:opacity-100 px-1.5 py-0.5 rounded cursor-pointer">✕</button>
+    </div>
+  </div>
+
+  <!-- Header Bar: Brand Nameplate on Left, 0.00 $ + Add Funds on Top Right, Login & Register Directly Beneath -->
+  <header class="sticky top-0 z-30 bg-obsidian-950/85 backdrop-blur-xl border-b border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 py-3.5 flex items-start justify-between gap-3">
+      <!-- Brand Nameplate: Team Mail 📬 & Team Number -->
+      <button type="button" data-action="reset-home" class="flex items-center gap-3 text-left group cursor-pointer focus:outline-none min-w-0 pt-0.5">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-gold-500/20 via-indigoLux-500/20 to-emeraldLux-500/20 border border-gold-400/35 flex items-center justify-center shrink-0 shadow-inner">
+          <svg class="w-5 h-5 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+          </svg>
+        </div>
+        <div class="min-w-0">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="inline-flex items-center gap-1 text-sm sm:text-base font-extrabold tracking-tight text-white group-hover:text-gold-400 transition">
+              <span>Team Mail</span>
+              <span aria-hidden="true" class="text-base leading-none">📬</span>
+            </span>
+            <span class="text-gold-400/70 font-extrabold select-none">&amp;</span>
+            <span class="text-xs sm:text-sm font-extrabold tracking-tight bg-gradient-to-r from-emeraldLux-400 to-indigoLux-400 bg-clip-text text-transparent">
+              Team Number
+            </span>
+          </div>
+          <p class="text-[11px] sm:text-xs text-slate-400 truncate mt-0.5">
+            OTP Numbers &amp; Verified E-mail Suite
+          </p>
+        </div>
+      </button>
+
+      <!-- Right Stack: Fixed 0.00 $ Pill + Add funds Button, with Login & Register Directly Beneath -->
+      <div class="flex flex-col items-end gap-1.5 shrink-0">
+        <div class="flex items-center gap-1.5 sm:gap-2">
+          <div id="header-balance-pill" class="px-2.5 sm:px-3 py-2 rounded-xl bg-emeraldLux-500/12 border border-emeraldLux-400/35 text-emeraldLux-400 font-mono font-bold text-xs sm:text-sm select-none">
+            0.00 $
+          </div>
+          <button type="button" data-action="open-deposit" class="px-3 sm:px-3.5 py-2 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-gold-500 active:scale-[0.99] text-obsidian-950 font-extrabold text-xs sm:text-sm shadow-lg shadow-amber-500/20 transition cursor-pointer flex items-center gap-1">
+            <span>+</span>
+            <span>Add funds</span>
+          </button>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span id="dashboard-account-badge" class="hidden px-2 py-0.5 rounded-lg bg-emeraldLux-500/15 border border-emeraldLux-400/35 text-emeraldLux-300 font-mono font-bold text-[10px] sm:text-[11px] max-w-[110px] truncate"></span>
+          <button id="header-login-btn" type="button" data-action="open-auth" data-auth-mode="login" class="px-2.5 py-1 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 text-slate-200 font-bold text-[11px] sm:text-xs border border-slate-700/80 transition cursor-pointer">
+            Login
+          </button>
+          <button id="header-register-btn" type="button" data-action="open-auth" data-auth-mode="register" class="px-2.5 py-1 rounded-lg bg-indigoLux-500/15 hover:bg-indigoLux-500/25 text-indigoLux-400 font-bold text-[11px] sm:text-xs border border-indigoLux-400/35 transition cursor-pointer">
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main class="flex-1 max-w-4xl w-full mx-auto px-4 py-5 space-y-4">
+    <!-- Mode Switcher: Numbers / E-mail's -->
+    <section aria-label="Service category mode" class="glass-panel rounded-2xl p-1.5 grid grid-cols-2 gap-1.5">
+      <button id="tab-numbers" type="button" data-action="switch-tab" data-tab="numbers" class="py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition cursor-pointer bg-gradient-to-r from-emeraldLux-500 to-emeraldLux-600 text-obsidian-950 shadow-md shadow-emerald-500/20">
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+          <path d="M12 18h.01" />
+        </svg>
+        <span>Numbers</span>
+      </button>
+      <button id="tab-emails" type="button" data-action="switch-tab" data-tab="emails" class="py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition cursor-pointer bg-transparent text-slate-300 hover:bg-obsidian-800/80">
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect width="20" height="16" x="2" y="4" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </svg>
+        <span>E-mail's</span>
+      </button>
+    </section>
+
+    <!-- Step 1: Choose a Service or E-mail Provider -->
+    <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-4">
+      <div class="flex items-start justify-between gap-2">
+        <div class="flex items-start gap-3">
+          <span class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-400/40 text-gold-400 font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+          <div>
+            <h1 id="step1-title" class="text-base sm:text-lg font-extrabold text-white">Choose a service</h1>
+            <p id="step1-subtitle" class="text-xs sm:text-sm text-slate-400">Select a social media, messaging, or popular app tile below</p>
+          </div>
+        </div>
+        <span id="selected-item-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-gold-500/15 text-gold-400 border border-gold-400/35 shrink-0">
+          Telegram
+        </span>
+      </div>
+
+      <!-- Search Input -->
+      <div class="relative">
+        <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.3-4.3" />
+        </svg>
+        <input id="service-search-input" type="text" placeholder="Search Telegram, WhatsApp, Instagram, TikTok, Discord..." class="w-full pl-10 pr-9 py-2.5 rounded-xl bg-obsidian-900/90 border border-slate-700/80 focus:border-gold-400 focus:outline-none text-xs sm:text-sm text-slate-100 placeholder:text-slate-500" />
+        <button type="button" data-action="clear-service-search" aria-label="Clear search" class="hidden id-clear-search absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white text-xs font-bold px-1.5 py-0.5 rounded cursor-pointer">✕</button>
+      </div>
+
+      <!-- Numbers Service Grid -->
+      <div id="services-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2.5"></div>
+
+      <!-- E-mail Providers Grid -->
+      <div id="emails-grid" class="hidden grid-cols-1 sm:grid-cols-2 gap-3"></div>
+    </section>
+
+    <!-- Step 2: Select Rank -->
+    <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-7 h-7 rounded-full bg-indigoLux-500/20 border border-indigoLux-400/40 text-indigoLux-400 font-extrabold text-xs flex items-center justify-center shrink-0">2</span>
+        <div>
+          <h2 class="text-sm sm:text-base font-extrabold text-white">Select rank</h2>
+          <p class="text-xs text-slate-400">Filter route quality tiers across global regions</p>
+        </div>
+      </div>
+
+      <div id="rank-pills" class="flex flex-wrap gap-2">
+        <button type="button" data-action="select-rank" data-rank="All" class="rank-pill px-3.5 py-1.5 rounded-full text-xs font-bold transition cursor-pointer bg-gradient-to-r from-indigoLux-500 to-indigoLux-600 text-white shadow-sm">All</button>
+        <button type="button" data-action="select-rank" data-rank="Gold" class="rank-pill px-3.5 py-1.5 rounded-full text-xs font-bold transition cursor-pointer bg-obsidian-800 text-slate-300 border border-slate-700/80 hover:border-gold-400/50">Gold</button>
+        <button type="button" data-action="select-rank" data-rank="Silver" class="rank-pill px-3.5 py-1.5 rounded-full text-xs font-bold transition cursor-pointer bg-obsidian-800 text-slate-300 border border-slate-700/80 hover:border-slate-500">Silver</button>
+        <button type="button" data-action="select-rank" data-rank="Bronze" class="rank-pill px-3.5 py-1.5 rounded-full text-xs font-bold transition cursor-pointer bg-obsidian-800 text-slate-300 border border-slate-700/80 hover:border-amber-700">Bronze</button>
+      </div>
+    </section>
+
+    <!-- Step 3: Global Countries & Low Rates Capped at $0.10 -->
+    <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-3.5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div class="flex items-start gap-3">
+          <span class="w-7 h-7 rounded-full bg-emeraldLux-500/20 border border-emeraldLux-400/40 text-emeraldLux-400 font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+          <div>
+            <h2 id="step3-title" class="text-sm sm:text-base font-extrabold text-white">Telegram numbers</h2>
+            <p id="step3-subtitle" class="text-xs text-slate-400">Buy Telegram — Choose a country route and click Buy (Max $0.10)</p>
+          </div>
+        </div>
+        <span id="route-count-badge" class="text-xs font-mono font-semibold text-gold-400">0 countries</span>
+      </div>
+
+      <!-- Country Search -->
+      <div class="relative">
+        <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.3-4.3" />
+        </svg>
+        <input id="country-search-input" type="text" placeholder="Search any country worldwide (United States, Canada, Bangladesh, Germany, Brazil...)" class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-obsidian-900/90 border border-slate-700/80 focus:border-emeraldLux-400 focus:outline-none text-xs sm:text-sm text-slate-100 placeholder:text-slate-500" />
+      </div>
+
+      <!-- Countries List -->
+      <div id="countries-list" class="space-y-2.5"></div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-3">
+      <h2 class="text-sm sm:text-base font-extrabold text-white">How it works</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div class="glass-sub p-3.5 rounded-xl">
+          <div class="text-xs font-extrabold text-gold-400 mb-1">1. Pick App or E-mail</div>
+          <p class="text-xs text-slate-300 leading-relaxed">Select any social media or messaging app under Numbers, or choose Gmail, Hotmail, iCloud Mail, Outlook, and more under E-mail's.</p>
+        </div>
+        <div class="glass-sub p-3.5 rounded-xl">
+          <div class="text-xs font-extrabold text-emeraldLux-400 mb-1">2. Add Funds via Official Channel</div>
+          <p class="text-xs text-slate-300 leading-relaxed">Tap + Add funds, select Binance, bKash, Nagad, or Rocket, copy the official UID or number, and submit a valid TrxID.</p>
+        </div>
+        <div class="glass-sub p-3.5 rounded-xl">
+          <div class="text-xs font-extrabold text-indigoLux-400 mb-1">3. Choose Country &amp; Buy</div>
+          <p class="text-xs text-slate-300 leading-relaxed">Pick from global routes capped at $0.10 and tap Buy to check availability or deposit funds when your balance is 0.00 $.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-2.5">
+      <h2 class="text-sm sm:text-base font-extrabold text-white mb-1">Frequently asked questions</h2>
+
+      <div class="accordion-item glass-sub rounded-xl overflow-hidden">
+        <button type="button" data-action="toggle-faq" class="w-full px-4 py-3 text-left flex items-center justify-between gap-3 hover:bg-obsidian-800/70 transition cursor-pointer">
+          <span class="text-xs sm:text-sm font-bold text-slate-100">Which payment channels can I use to add funds?</span>
+          <svg class="accordion-chevron w-4 h-4 text-gold-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+        <div class="accordion-content bg-obsidian-950/60">
+          <p class="px-4 py-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/70">
+            Payments are accepted exclusively through Binance (UID: 824939921), bKash (01907213466), Nagad (01907213466), and Rocket (01311311085). Client-side balance never self-credits without verification.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item glass-sub rounded-xl overflow-hidden">
+        <button type="button" data-action="toggle-faq" class="w-full px-4 py-3 text-left flex items-center justify-between gap-3 hover:bg-obsidian-800/70 transition cursor-pointer">
+          <span class="text-xs sm:text-sm font-bold text-slate-100">Why are invalid or random Transaction IDs rejected?</span>
+          <svg class="accordion-chevron w-4 h-4 text-gold-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+        <div class="accordion-content bg-obsidian-950/60">
+          <p class="px-4 py-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/70">
+            Every Transaction ID is strictly validated for alphanumeric structure, length, character variety, and uniqueness. Random text, keyboard walks, symbols, or duplicates are immediately rejected.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item glass-sub rounded-xl overflow-hidden">
+        <button type="button" data-action="toggle-faq" class="w-full px-4 py-3 text-left flex items-center justify-between gap-3 hover:bg-obsidian-800/70 transition cursor-pointer">
+          <span class="text-xs sm:text-sm font-bold text-slate-100">What is the maximum rate for top-tier countries?</span>
+          <svg class="accordion-chevron w-4 h-4 text-gold-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+        <div class="accordion-content bg-obsidian-950/60">
+          <p class="px-4 py-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/70">
+            Global country routes are set to low rates capped at $0.10, including top-tier countries such as the United States ($0.10) and Canada ($0.10).
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-obsidian-950/90 border-t border-slate-800/80 text-slate-400 mt-8">
+    <div class="max-w-4xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+      <div class="flex items-center gap-2 font-bold text-slate-100">
+        <span class="w-2.5 h-2.5 rounded-full bg-gold-400"></span>
+        <span>Team Mail 📬 &amp; Team Number</span>
+      </div>
+      <p class="text-slate-400 text-center sm:text-right">
+        Official channels: Binance • bKash • Nagad • Rocket
+      </p>
+    </div>
+  </footer>
+
+  <!-- + Add Funds Modal -->
+  <div id="deposit-modal" class="fixed inset-0 z-40 hidden items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="deposit-modal-title">
+    <div class="glass-panel w-full max-w-lg rounded-2xl shadow-2xl border border-gold-400/25 overflow-hidden max-h-[92vh] flex flex-col">
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-obsidian-800 via-indigoLux-600/30 to-obsidian-800 border-b border-slate-700/80 text-white px-4 py-3.5 flex items-center justify-between gap-2 shrink-0">
+        <div>
+          <h2 id="deposit-modal-title" class="text-sm sm:text-base font-extrabold text-gold-400">Add Funds — Official Deposit</h2>
+          <p class="text-[11px] sm:text-xs text-slate-300">Select Binance, bKash, Nagad, or Rocket, copy account &amp; submit TrxID</p>
+        </div>
+        <button type="button" data-action="close-deposit" aria-label="Close deposit modal" class="w-8 h-8 rounded-xl bg-obsidian-900/90 hover:bg-obsidian-700 border border-slate-700 flex items-center justify-center font-bold text-sm transition cursor-pointer">✕</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div id="deposit-modal-scroll" class="p-4 space-y-4 overflow-y-auto">
+        <!-- Payment Methods (Binance, bKash, Nagad, Rocket) -->
+        <div class="space-y-2">
+          <label class="block text-xs font-extrabold text-slate-200 uppercase tracking-wide">1. Choose Payment Method</label>
+          <div id="payment-method-cards" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
+        </div>
+
+        <!-- Selected Account Details & Copy Button -->
+        <div id="selected-method-details" class="p-3.5 rounded-xl bg-emeraldLux-500/10 border border-emeraldLux-400/30 space-y-2">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <span id="active-method-label" class="text-[11px] font-bold uppercase tracking-wider text-emeraldLux-400">Binance UID</span>
+              <div id="active-method-value" class="font-mono text-sm sm:text-base font-extrabold text-white select-all">824939921</div>
+            </div>
+            <button type="button" data-action="copy-method-value" class="px-3 py-1.5 rounded-lg bg-emeraldLux-500 hover:bg-emeraldLux-400 text-obsidian-950 text-xs font-extrabold transition cursor-pointer shrink-0">
+              Copy
+            </button>
+          </div>
+          <p id="active-method-note" class="text-[11px] text-slate-300 leading-relaxed">
+            Send exact amount to Binance UID 824939921 and enter your valid transaction ID below.
+          </p>
+        </div>
+
+        <!-- Deposit Amount Chips & Custom USD Input -->
+        <div class="space-y-2">
+          <div class="flex items-center justify-between gap-2">
+            <label class="text-xs font-extrabold text-slate-200 uppercase tracking-wide">2. Select Amount (USD)</label>
+            <span class="text-[11px] font-mono text-gold-400">Balance remains 0.00 $</span>
+          </div>
+          <div class="grid grid-cols-3 sm:grid-cols-6 gap-1.5" id="amount-chips">
+            <button type="button" data-action="select-amount-chip" data-amount="4" class="amount-chip py-2 rounded-xl text-xs font-mono font-bold border transition cursor-pointer bg-obsidian-800 text-slate-300 border-slate-700 hover:border-gold-400">$4</button>
+            <button type="button" data-action="select-amount-chip" data-amount="10" class="amount-chip py-2 rounded-xl text-xs font-mono font-bold border transition cursor-pointer bg-gold-500 text-obsidian-950 border-gold-400">$10</button>
+            <button type="button" data-action="select-amount-chip" data-amount="25" class="amount-chip py-2 rounded-xl text-xs font-mono font-bold border transition cursor-pointer bg-obsidian-800 text-slate-300 border-slate-700 hover:border-gold-400">$25</button>
+            <button type="button" data-action="select-amount-chip" data-amount="50" class="amount-chip py-2 rounded-xl text-xs font-mono font-bold border transition cursor-pointer bg-obsidian-800 text-slate-300 border-slate-700 hover:border-gold-400">$50</button>
+            <button type="button" data-action="select-amount-chip" data-amount="100" class="amount-chip py-2 rounded-xl text-xs font-mono font-bold border transition cursor-pointer bg-obsidian-800 text-slate-300 border-slate-700 hover:border-gold-400">$100</button>
+            <button type="button" data-action="select-amount-chip" data-amount="125" class="amount-chip py-2 rounded-xl text-xs font-mono font-bold border transition cursor-pointer bg-obsidian-800 text-slate-300 border-slate-700 hover:border-gold-400">$125</button>
+          </div>
+          <div>
+            <label for="deposit-amount-input" class="block text-[11px] font-semibold text-slate-400 mb-1">Custom Amount ($ USD)</label>
+            <input id="deposit-amount-input" type="number" min="1" max="10000" step="0.01" value="10" class="w-full px-3.5 py-2 rounded-xl bg-obsidian-900 border border-slate-700 focus:border-gold-400 focus:outline-none font-mono text-sm text-white" />
+          </div>
+        </div>
+
+        <!-- Transaction ID (TrxID) Form -->
+        <form id="trxid-form" class="space-y-2.5" novalidate>
+          <div class="flex items-center justify-between gap-2">
+            <label for="trxid-input" class="text-xs font-extrabold text-slate-200 uppercase tracking-wide">3. Transaction ID (TrxID)</label>
+            <button type="button" data-action="fill-sample-trxid" class="text-[11px] font-bold text-gold-400 hover:underline cursor-pointer">
+              Fill Sample
+            </button>
+          </div>
+          <input id="trxid-input" type="text" autocomplete="off" placeholder="Enter valid Transaction ID (TrxID)" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-900 border border-slate-700 focus:border-gold-400 focus:outline-none font-mono text-xs sm:text-sm text-white" />
+          <p id="trxid-format-hint" class="text-[11px] text-slate-400">
+            Binance format: 8–16 alphanumeric characters (e.g., TXN9847210B). Random or invalid text is rejected.
+          </p>
+
+          <!-- Rejection / Error Alert Box -->
+          <div id="trxid-error-box" class="hidden p-3 rounded-xl bg-red-950/70 border border-red-500/40 text-red-200 text-xs font-medium leading-relaxed" role="alert"></div>
+
+          <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-gold-500 text-obsidian-950 font-extrabold text-xs sm:text-sm shadow-lg shadow-amber-500/20 transition cursor-pointer">
+            Submit TrxID for Verification
+          </button>
+        </form>
+
+        <!-- Pending Verification Receipts -->
+        <div class="space-y-2 pt-2 border-t border-slate-800">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold text-slate-200">Submitted Verification Receipts</span>
+            <span id="receipt-count-badge" class="text-[11px] font-mono text-slate-400">0 pending</span>
+          </div>
+          <div id="receipts-list" class="space-y-2">
+            <div class="p-3 rounded-xl bg-obsidian-900/70 border border-dashed border-slate-700 text-center text-xs text-slate-500">
+              No TrxID receipts submitted yet.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login / Register Modal -->
+  <div id="auth-modal" class="fixed inset-0 z-40 hidden items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+    <div class="glass-panel w-full max-w-md rounded-2xl shadow-2xl border border-indigoLux-400/30 overflow-hidden max-h-[92vh] flex flex-col">
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-obsidian-800 via-indigoLux-600/35 to-obsidian-800 border-b border-slate-700/80 text-white px-4 py-3.5 flex items-center justify-between gap-2 shrink-0">
+        <div>
+          <h2 id="auth-modal-title" class="text-sm sm:text-base font-extrabold text-indigoLux-400">Account Login</h2>
+          <p id="auth-modal-subtitle" class="text-[11px] sm:text-xs text-slate-300">Access Team Mail 📬 &amp; Team Number</p>
+        </div>
+        <button type="button" data-action="close-auth" aria-label="Close account modal" class="w-8 h-8 rounded-xl bg-obsidian-900/90 hover:bg-obsidian-700 border border-slate-700 flex items-center justify-center font-bold text-sm transition cursor-pointer">✕</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-4 space-y-4 overflow-y-auto">
+        <!-- Tab Switcher: Login / Register -->
+        <div class="bg-obsidian-900 rounded-xl p-1 grid grid-cols-2 gap-1 border border-slate-800">
+          <button id="auth-tab-login" type="button" data-action="switch-auth-mode" data-auth-mode="login" class="py-2 px-3 rounded-lg font-bold text-xs sm:text-sm transition cursor-pointer bg-indigoLux-500 text-white shadow-sm">
+            Login
+          </button>
+          <button id="auth-tab-register" type="button" data-action="switch-auth-mode" data-auth-mode="register" class="py-2 px-3 rounded-lg font-bold text-xs sm:text-sm transition cursor-pointer text-slate-400 hover:text-white">
+            Register
+          </button>
+        </div>
+
+        <!-- Active Session Banner -->
+        <div id="auth-session-banner" class="hidden p-3 rounded-xl bg-emeraldLux-500/12 border border-emeraldLux-400/30 flex items-center justify-between gap-2 text-xs">
+          <div class="min-w-0">
+            <span class="font-bold text-emeraldLux-400 block">Signed in session</span>
+            <span id="auth-session-user" class="font-mono text-slate-200 truncate block"></span>
+          </div>
+          <button type="button" data-action="logout-session" class="px-2.5 py-1 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 border border-slate-700 text-slate-200 font-bold text-[11px] cursor-pointer shrink-0">
+            Sign out
+          </button>
+        </div>
+
+        <!-- Auth Feedback Box -->
+        <div id="auth-feedback-box" class="hidden p-3 rounded-xl text-xs font-medium leading-relaxed" role="alert"></div>
+
+        <!-- Dedicated Single-View Container (renders ONLY Login or ONLY Register) -->
+        <div id="auth-view-slot"></div>
+
+        <!-- Hidden Template: Login View (Name + Password) -->
+        <template id="login-view-template">
+          <form id="login-form" class="space-y-3" novalidate>
+            <div class="p-2.5 rounded-xl bg-indigoLux-500/10 border border-indigoLux-400/25 text-[11px] text-slate-300">
+              Sign in to your account using your <strong class="text-white">Name</strong> and <strong class="text-white">Password</strong>.
+            </div>
+            <div>
+              <label for="login-name-input" class="block text-xs font-bold text-slate-300 mb-1">Name</label>
+              <input id="login-name-input" type="text" autocomplete="username" placeholder="Enter your registered name" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-900 border border-slate-700 focus:border-indigoLux-400 focus:outline-none text-xs sm:text-sm text-white placeholder:text-slate-500" />
+            </div>
+            <div>
+              <label for="login-password-input" class="block text-xs font-bold text-slate-300 mb-1">Password</label>
+              <input id="login-password-input" type="password" autocomplete="current-password" placeholder="Enter your password (min 6 chars)" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-900 border border-slate-700 focus:border-indigoLux-400 focus:outline-none text-xs sm:text-sm text-white placeholder:text-slate-500" />
+            </div>
+            <button type="submit" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-indigoLux-500 to-indigoLux-600 hover:from-indigoLux-400 hover:to-indigoLux-500 text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-indigo-500/20 transition cursor-pointer">
+              Login to Account
+            </button>
+          </form>
+        </template>
+
+        <!-- Hidden Template: Register View (Name + Number + Password) -->
+        <template id="register-view-template">
+          <form id="register-form" class="space-y-3" novalidate>
+            <div class="p-2.5 rounded-xl bg-gold-500/10 border border-gold-400/25 text-[11px] text-slate-300">
+              Complete registration with <strong class="text-gold-400">Name</strong>, <strong class="text-gold-400">Number</strong>, and <strong class="text-gold-400">Password</strong> to proceed to the Login step.
+            </div>
+            <div>
+              <label for="register-name-input" class="block text-xs font-bold text-slate-300 mb-1">Name</label>
+              <input id="register-name-input" type="text" autocomplete="name" placeholder="Enter your full name or username" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-900 border border-slate-700 focus:border-gold-400 focus:outline-none text-xs sm:text-sm text-white placeholder:text-slate-500" />
+            </div>
+            <div>
+              <label for="register-number-input" class="block text-xs font-bold text-slate-300 mb-1">Number</label>
+              <input id="register-number-input" type="tel" autocomplete="tel" placeholder="Enter your phone number (e.g., +8801700000000)" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-900 border border-slate-700 focus:border-gold-400 focus:outline-none text-xs sm:text-sm text-white placeholder:text-slate-500" />
+            </div>
+            <div>
+              <label for="register-password-input" class="block text-xs font-bold text-slate-300 mb-1">Password</label>
+              <input id="register-password-input" type="password" autocomplete="new-password" placeholder="Create password (at least 6 characters)" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-900 border border-slate-700 focus:border-gold-400 focus:outline-none text-xs sm:text-sm text-white placeholder:text-slate-500" />
+            </div>
+            <button type="submit" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-gold-500 text-obsidian-950 font-extrabold text-xs sm:text-sm shadow-lg shadow-amber-500/20 transition cursor-pointer">
+              Create Account
+            </button>
+          </form>
+        </template>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // Crisp SVG brand icons for social media, messaging, and popular apps
+      function getServiceSvg(id) {
+        switch (id) {
+          case 'telegram':
+            return '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.6c-.2-.9-1.1-1.3-2-.9L2.8 10.6c-.9.3-.9 1.6 0 1.9l4.2 1.3 1.6 5.2c.3.9 1.4 1.2 2.1.5l2.4-2.2 4.6 3.4c.8.6 1.9.1 2.1-.9L22 5.4c.1-.3.1-.5-.1-.8zM9.4 13.7l8.9-5.8-7.1 7.2-.3 3.1-1.5-4.5z"/></svg>';
+          case 'whatsapp':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path d="M9 10c0 3 2.5 5 5 5l1.3-1.3a.8.8 0 0 1 .9-.2l1.8.8a.8.8 0 0 1 .5.8c0 1.4-1.2 2.4-2.6 2.4-3.6 0-7.5-3.4-7.5-7.5 0-1.4 1-2.6 2.4-2.6a.8.8 0 0 1 .8.5l.8 1.8a.8.8 0 0 1-.2.9L9 10z"/></svg>';
+          case 'google':
+            return '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.3c-.2 1.2-.9 2.2-2 2.9v2.4h3.2c1.9-1.7 2.9-4.3 2.9-7.1z"/><path d="M12 22c2.7 0 5-.9 6.6-2.5l-3.2-2.4c-.9.6-2.1 1-3.4 1-2.6 0-4.9-1.8-5.7-4.2H3v2.5C4.7 19.7 8.1 22 12 22z"/><path d="M6.3 13.9c-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9V7.6H3C2.4 8.9 2 10.4 2 12s.4 3.1 1 4.4l3.3-2.5z"/><path d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.9-2.9C17 2.9 14.7 2 12 2 8.1 2 4.7 4.3 3 7.6l3.3 2.5c.8-2.4 3.1-4.2 5.7-4.2z"/></svg>';
+          case 'instagram':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>';
+          case 'facebook':
+            return '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M15 3h4v4h-3c-1.1 0-2 .9-2 2v3h5l-1 4h-4v7h-4v-7H7v-4h3V9a6 6 0 0 1 5-6z"/></svg>';
+          case 'tiktok':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>';
+          case 'discord':
+            return '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 6.3a16.6 16.6 0 0 0-4.1-1.3l-.2.4a15.3 15.3 0 0 1 3.7 1.8c-1.6-.7-3.1-1.1-4.7-1.3a12 12 0 0 0-4.4 0c-1.6.2-3.1.6-4.7 1.3a15.3 15.3 0 0 1 3.7-1.8l-.2-.4a16.6 16.6 0 0 0-4.1 1.3C2.4 10 1.8 13.6 2.1 17.2a16.8 16.8 0 0 0 5.1 2.6l1.1-1.8c-.6-.2-1.2-.5-1.7-.8l.4-.3c3.3 1.5 6.7 1.5 10 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8a16.8 16.8 0 0 0 5.1-2.6c.4-4.1-.7-7.7-3.5-10.9zM9.3 14.9c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8 1.6.8 1.6 1.8-.7 1.8-1.6 1.8zm5.4 0c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8 1.6.8 1.6 1.8-.7 1.8-1.6 1.8z"/></svg>';
+          case 'x-twitter':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>';
+          case 'snapchat':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a5 5 0 0 0-5 5v2.3c0 .8-.5 1.5-1.2 1.8l-.8.4c-.5.2-.5 1 0 1.2l1.3.5c.4.2.6.6.5 1-.2.9-.8 2-2.1 2.5-.5.2-.4 1 .1 1.1 1.6.3 2.9.9 3.6 1.8.4.5 1.1.5 1.5.1.7-.7 1.7-1 2.7-1s2 .3 2.7 1c.4.4 1.1.4 1.5-.1.7-.9 2-1.5 3.6-1.8.5-.1.6-.9.1-1.1-1.3-.5-1.9-1.6-2.1-2.5-.1-.4.1-.8.5-1l1.3-.5c.5-.2.5-1 0-1.2l-.8-.4A2 2 0 0 1 17 10.3V8a5 5 0 0 0-5-5z"/></svg>';
+          case 'threads':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 10.5c0-1.8-1.4-3-3.4-3-2.2 0-3.6 1.5-3.6 4.5s1.4 4.5 3.7 4.5c1.9 0 3.2-.9 3.5-2.3H12v-2.2h5.2c.1.5.1 1 .1 1.5 0 2.9-2 4.7-5.2 4.7-3.5 0-5.8-2.4-5.8-6.5S8.7 5.5 12.1 5.5c3.2 0 5.4 1.9 5.5 4.8"/></svg>';
+          case 'reddit':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><circle cx="9.5" cy="13.5" r="1" fill="currentColor"/><circle cx="14.5" cy="13.5" r="1" fill="currentColor"/><path d="M9.5 17a4 4 0 0 0 5 0"/><path d="M12 7V3l4 1.5"/></svg>';
+          case 'pinterest':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 21l2.2-8.5c-.4-.7-.6-1.5-.6-2.3 0-1.9 1.2-3.2 2.8-3.2 1.3 0 2 1 2 2.2 0 1.4-.9 3.4-1.4 5.3-.4 1.6.8 2.9 2.4 2.9 2.9 0 4.8-3.7 4.8-8 0-3.3-2.2-5.8-6.2-5.8-4.5 0-7.3 3.3-7.3 7 0 1.3.4 2.2 1.1 2.9"/></svg>';
+          case 'youtube':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="3"/><polygon points="10 9 15 12 10 15 10 9" fill="currentColor"/></svg>';
+          case 'linkedin':
+            return '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 9.5H3.5V20h3V9.5zM5 4.5A1.75 1.75 0 1 0 5 8a1.75 1.75 0 0 0 0-3.5zM20.5 13.8c0-2.8-1.5-4.5-3.9-4.5-1.7 0-2.6.9-3.1 1.7V9.5h-3V20h3v-5.6c0-1.5.8-2.4 2.1-2.4 1.2 0 1.9.8 1.9 2.4V20h3v-6.2z"/></svg>';
+          case 'viber':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="5"/><path d="M13 7a4 4 0 0 1 4 4"/><path d="M13 10a1 1 0 0 1 1 1"/><path d="M8.5 8.5l2 2-1.2 1.2a5.5 5.5 0 0 0 3 3l1.2-1.2 2 2c-.6 1-1.8 1.5-3 1.3-3.2-.6-5.8-3.2-6.4-6.4-.2-1.2.3-2.4 1.4-2.6z"/></svg>';
+          case 'wechat':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 4a6.5 6.5 0 0 0-6.5 6.5c0 1.8.8 3.5 2.1 4.6L4 18l3.1-1.3c.8.2 1.6.3 2.4.3 3.6 0 6.5-2.9 6.5-6.5S13.1 4 9.5 4z"/><circle cx="7.3" cy="9.5" r="0.8" fill="currentColor"/><circle cx="11.7" cy="9.5" r="0.8" fill="currentColor"/><path d="M14.5 11.5c3.3 0 6 2.4 6 5.5 0 1.4-.6 2.7-1.6 3.6l.9 2.4-2.5-1c-.9.3-1.8.5-2.8.5-3.3 0-6-2.4-6-5.5 0-3.1 2.7-6 6-6z"/></svg>';
+          case 'line':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5c0-4.7-4-8.5-9-8.5s-9 3.8-9 8.5c0 4.2 3.2 7.7 7.5 8.4L12 22l2.1-2.2c4-.8 6.9-4.1 6.9-8.3z"/><path d="M8 10v3h2.5"/><path d="M13 10v3"/><path d="M15.5 13v-3l2.5 3v-3"/></svg>';
+          case 'signal':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-9 9c0 2 .7 3.8 1.8 5.2L3.5 21l3.8-1.3A9 9 0 1 0 12 3z"/><path d="M8.5 12h7"/><path d="M12 8.5v7"/></svg>';
+          case 'kakaotalk':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="11" rx="8.5" ry="6.5"/><path d="M9.5 17.2L7.5 21l4.2-3.4"/><path d="M8.5 11h7"/><path d="M12 8.5v5"/></svg>';
+          case 'twitch':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3h16v11l-4 4h-4l-3 3v-3H5V3z"/><line x1="11" x2="11" y1="7" y2="11"/><line x1="15" x2="15" y1="7" y2="11"/></svg>';
+          case 'spotify':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M7.5 9.5c3.2-.9 6.8-.7 9.5.7"/><path d="M8.2 12.5c2.6-.7 5.5-.5 7.7.6"/><path d="M9 15.3c2-.5 4.2-.4 5.9.5"/></svg>';
+          case 'tinder':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1.5 2.5 1 5-1 6.5 2.5-.5 4.5-2.5 4.5-5 2.5 1.8 4 4.8 4 8 0 4.4-3.4 8-7.5 8S4.5 16.9 4.5 12.5C4.5 8.2 7.5 4.5 12 3z"/></svg>';
+          case 'bumble':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M8.5 12h7"/><path d="M9.5 9h5"/><path d="M10 15h4"/></svg>';
+          case 'amazon':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15.5c3.8 2.5 8.6 2.5 12.5.3"/><path d="M16.5 14.5l2.5 1.3-1.6 2.3"/><path d="M9 8.5h6v7H9z"/></svg>';
+          case 'microsoft':
+            return '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>';
+          case 'apple':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5c.8-1.5 2-2.5 3.5-2.5.2 1.6-.6 3.1-1.9 4"/><path d="M17.5 19.5c-1.1 1.4-2.2 1.5-3.4 1-.9-.4-1.8-.4-2.7 0-1.2.5-2.3.4-3.4-1-2.2-2.8-2.5-7.4-.3-9.5 1.1-1.1 2.5-1.2 3.7-.6.8.4 1.6.4 2.4 0 1.3-.6 2.8-.5 3.9.6.8.8 1.3 1.8 1.5 2.9-1.7.9-2.2 3.5-.7 4.7.2.2.5.4.8.5-.4.3-.9.5-1.3.8z"/></svg>';
+          case 'netflix':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16"/><path d="M17 4v16"/><path d="M7 4l10 16"/></svg>';
+          case 'uber':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><rect x="9.5" y="9.5" width="5" height="5" rx="0.8"/></svg>';
+          case 'airbnb':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.5C9.5 8.5 6.5 13 6.5 16a5.5 5.5 0 0 0 11 0c0-3-3-7.5-5.5-11.5z"/><circle cx="12" cy="15.5" r="2"/></svg>';
+          case 'paypal':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 19L8.5 5h6.5a4 4 0 0 1 0 8h-3.5l-1 6h-4z"/><path d="M9.5 21l.5-2h5a4 4 0 0 0 0-8h-1"/></svg>';
+          case 'steam':
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="15.5" cy="8.5" r="2.2"/><circle cx="9" cy="15" r="2.2"/><path d="M11 13.5l2.8-3.2"/></svg>';
+          default:
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg>';
+        }
+      }
+
+      // Social media, messaging, and popular apps catalog
+      const SERVICES = [
+        { id: 'telegram', name: 'Telegram', code: 'TG', bg: 'bg-sky-500/15 text-sky-400 border border-sky-400/30' },
+        { id: 'whatsapp', name: 'WhatsApp', code: 'WA', bg: 'bg-emerald-500/15 text-emerald-400 border border-emerald-400/30' },
+        { id: 'google', name: 'Google', code: 'G', bg: 'bg-blue-500/15 text-blue-400 border border-blue-400/30' },
+        { id: 'instagram', name: 'Instagram', code: 'IG', bg: 'bg-pink-500/15 text-pink-400 border border-pink-400/30' },
+        { id: 'facebook', name: 'Facebook', code: 'FB', bg: 'bg-indigo-500/15 text-indigo-400 border border-indigo-400/30' },
+        { id: 'tiktok', name: 'TikTok', code: 'TT', bg: 'bg-slate-700/60 text-white border border-slate-500/40' },
+        { id: 'discord', name: 'Discord', code: 'DC', bg: 'bg-violet-500/15 text-violet-400 border border-violet-400/30' },
+        { id: 'x-twitter', name: 'X / Twitter', code: 'X', bg: 'bg-slate-800 text-gold-400 border border-gold-400/30' },
+        { id: 'snapchat', name: 'Snapchat', code: 'SC', bg: 'bg-amber-500/15 text-amber-300 border border-amber-400/30' },
+        { id: 'threads', name: 'Threads', code: 'TH', bg: 'bg-zinc-700/60 text-zinc-100 border border-zinc-500/40' },
+        { id: 'reddit', name: 'Reddit', code: 'RD', bg: 'bg-orange-500/15 text-orange-400 border border-orange-400/30' },
+        { id: 'pinterest', name: 'Pinterest', code: 'PIN', bg: 'bg-rose-500/15 text-rose-400 border border-rose-400/30' },
+        { id: 'youtube', name: 'YouTube', code: 'YT', bg: 'bg-red-500/15 text-red-400 border border-red-400/30' },
+        { id: 'linkedin', name: 'LinkedIn', code: 'IN', bg: 'bg-sky-500/15 text-sky-300 border border-sky-400/30' },
+        { id: 'viber', name: 'Viber', code: 'VB', bg: 'bg-purple-500/15 text-purple-400 border border-purple-400/30' },
+        { id: 'wechat', name: 'WeChat', code: 'WC', bg: 'bg-lime-500/15 text-lime-400 border border-lime-400/30' },
+        { id: 'line', name: 'LINE', code: 'LN', bg: 'bg-green-500/15 text-green-400 border border-green-400/30' },
+        { id: 'signal', name: 'Signal', code: 'SG', bg: 'bg-blue-500/15 text-blue-300 border border-blue-400/30' },
+        { id: 'kakaotalk', name: 'KakaoTalk', code: 'KT', bg: 'bg-yellow-500/15 text-yellow-300 border border-yellow-400/30' },
+        { id: 'twitch', name: 'Twitch', code: 'TW', bg: 'bg-purple-500/15 text-purple-300 border border-purple-400/30' },
+        { id: 'spotify', name: 'Spotify', code: 'SP', bg: 'bg-emerald-500/15 text-emerald-300 border border-emerald-400/30' },
+        { id: 'tinder', name: 'Tinder', code: 'TD', bg: 'bg-rose-500/15 text-rose-300 border border-rose-400/30' },
+        { id: 'bumble', name: 'Bumble', code: 'BM', bg: 'bg-amber-500/15 text-amber-400 border border-amber-400/30' },
+        { id: 'amazon', name: 'Amazon', code: 'AMZ', bg: 'bg-yellow-500/15 text-amber-400 border border-amber-400/30' },
+        { id: 'microsoft', name: 'Microsoft', code: 'MS', bg: 'bg-cyan-500/15 text-cyan-400 border border-cyan-400/30' },
+        { id: 'apple', name: 'Apple', code: 'AP', bg: 'bg-zinc-700/60 text-white border border-zinc-500/40' },
+        { id: 'netflix', name: 'Netflix', code: 'NF', bg: 'bg-red-500/15 text-red-400 border border-red-400/30' },
+        { id: 'uber', name: 'Uber', code: 'UB', bg: 'bg-slate-700/60 text-slate-200 border border-slate-500/40' },
+        { id: 'airbnb', name: 'Airbnb', code: 'AB', bg: 'bg-pink-500/15 text-pink-300 border border-pink-400/30' },
+        { id: 'paypal', name: 'PayPal', code: 'PP', bg: 'bg-blue-500/15 text-blue-400 border border-blue-400/30' },
+        { id: 'steam', name: 'Steam', code: 'ST', bg: 'bg-slate-700/60 text-slate-300 border border-slate-500/40' },
+      ];
+
+      // Required E-mail providers
+      const EMAIL_PROVIDERS = [
+        { id: 'gmail', name: 'Gmail', address: '@gmail.com', rank: 'Gold', stock: '18,450 available', price: 0.10 },
+        { id: 'hotmail', name: 'Hotmail', address: '@hotmail.com', rank: 'Silver', stock: '11,280 available', price: 0.08 },
+        { id: 'icloud', name: 'iCloud Mail', address: '@icloud.com', rank: 'Gold', stock: '7,640 available', price: 0.10 },
+        { id: 'outlook', name: 'Outlook', address: '@outlook.com', rank: 'Silver', stock: '13,920 available', price: 0.075 },
+        { id: 'proton', name: 'Proton Mail', address: '@proton.me', rank: 'Gold', stock: '6,510 available', price: 0.095 },
+        { id: 'yahoo', name: 'Yahoo Mail', address: '@yahoo.com', rank: 'Silver', stock: '10,340 available', price: 0.07 },
+        { id: 'gmx', name: 'GMX Mail', address: '@gmx.com', rank: 'Bronze', stock: '8,190 available', price: 0.05 },
+        { id: 'zoho', name: 'Zoho Mail', address: '@zoho.com', rank: 'Bronze', stock: '5,870 available', price: 0.06 },
+      ];
+
+      // Global countries across continents with distinct low per-country rates capped at $0.10
+      const COUNTRIES = [
+        // North America
+        { id: 'us', name: 'United States', region: 'North America', code: '+1', flag: '🇺🇸', rank: 'Gold', stock: '9,640 available', price: 0.10, routes: ['Tier-1 Mobile', 'Clean Route', 'High Delivery'] },
+        { id: 'ca', name: 'Canada', region: 'North America', code: '+1', flag: '🇨🇦', rank: 'Gold', stock: '4,390 available', price: 0.10, routes: ['CA Mobile', 'Clean Carrier'] },
+        { id: 'mx', name: 'Mexico', region: 'North America', code: '+52', flag: '🇲🇽', rank: 'Silver', stock: '5,210 available', price: 0.034, routes: ['MX Direct', 'Standard Route'] },
+        { id: 'do', name: 'Dominican Republic', region: 'North America', code: '+1-809', flag: '🇩🇴', rank: 'Bronze', stock: '2,180 available', price: 0.027, routes: ['DO Standard', 'Backup Route'] },
+        { id: 'cr', name: 'Costa Rica', region: 'North America', code: '+506', flag: '🇨🇷', rank: 'Silver', stock: '1,760 available', price: 0.042, routes: ['CR Direct', 'Clean Route'] },
+
+        // Asia
+        { id: 'bd', name: 'Bangladesh', region: 'Asia', code: '+880', flag: '🇧🇩', rank: 'Gold', stock: '4,280 available', price: 0.04, routes: ['Fast Direct', 'Clean Carrier', 'Priority SMS'] },
+        { id: 'in', name: 'India', region: 'Asia', code: '+91', flag: '🇮🇳', rank: 'Bronze', stock: '12,400 available', price: 0.02, routes: ['Economy Route', 'Standard Route'] },
+        { id: 'id', name: 'Indonesia', region: 'Asia', code: '+62', flag: '🇮🇩', rank: 'Silver', stock: '6,120 available', price: 0.03, routes: ['Direct Local', 'Backup Route'] },
+        { id: 'ph', name: 'Philippines', region: 'Asia', code: '+63', flag: '🇵🇭', rank: 'Silver', stock: '4,760 available', price: 0.035, routes: ['Direct PH', 'Clean Route'] },
+        { id: 'vn', name: 'Vietnam', region: 'Asia', code: '+84', flag: '🇻🇳', rank: 'Silver', stock: '5,310 available', price: 0.032, routes: ['Fast VN', 'Standard Route'] },
+        { id: 'th', name: 'Thailand', region: 'Asia', code: '+66', flag: '🇹🇭', rank: 'Gold', stock: '3,490 available', price: 0.055, routes: ['Clean Carrier', 'Direct SMS'] },
+        { id: 'my', name: 'Malaysia', region: 'Asia', code: '+60', flag: '🇲🇾', rank: 'Gold', stock: '3,820 available', price: 0.06, routes: ['Priority MY', 'Clean Route'] },
+        { id: 'sg', name: 'Singapore', region: 'Asia', code: '+65', flag: '🇸🇬', rank: 'Gold', stock: '2,140 available', price: 0.085, routes: ['Tier-1 SG', 'Fast Delivery'] },
+        { id: 'jp', name: 'Japan', region: 'Asia', code: '+81', flag: '🇯🇵', rank: 'Gold', stock: '1,980 available', price: 0.095, routes: ['Clean JP', 'Direct SMS'] },
+        { id: 'kr', name: 'South Korea', region: 'Asia', code: '+82', flag: '🇰🇷', rank: 'Gold', stock: '2,290 available', price: 0.09, routes: ['Clean KR', 'Priority Route'] },
+        { id: 'pk', name: 'Pakistan', region: 'Asia', code: '+92', flag: '🇵🇰', rank: 'Bronze', stock: '7,840 available', price: 0.018, routes: ['Economy PK', 'Standard Route'] },
+        { id: 'tr', name: 'Turkey', region: 'Asia & Europe', code: '+90', flag: '🇹🇷', rank: 'Silver', stock: '4,950 available', price: 0.038, routes: ['Direct TR', 'Backup Route'] },
+        { id: 'ae', name: 'United Arab Emirates', region: 'Asia', code: '+971', flag: '🇦🇪', rank: 'Gold', stock: '2,610 available', price: 0.08, routes: ['UAE Direct', 'Clean Carrier'] },
+        { id: 'sa', name: 'Saudi Arabia', region: 'Asia', code: '+966', flag: '🇸🇦', rank: 'Gold', stock: '2,470 available', price: 0.075, routes: ['KSA Direct', 'Priority SMS'] },
+        { id: 'kz', name: 'Kazakhstan', region: 'Asia', code: '+7', flag: '🇰🇿', rank: 'Silver', stock: '3,190 available', price: 0.028, routes: ['KZ Direct', 'Standard Route'] },
+        { id: 'uz', name: 'Uzbekistan', region: 'Asia', code: '+998', flag: '🇺🇿', rank: 'Bronze', stock: '3,640 available', price: 0.022, routes: ['UZ Standard', 'Backup Route'] },
+
+        // Europe
+        { id: 'gb', name: 'United Kingdom', region: 'Europe', code: '+44', flag: '🇬🇧', rank: 'Silver', stock: '3,510 available', price: 0.072, routes: ['Standard UK', 'Fast Delivery'] },
+        { id: 'de', name: 'Germany', region: 'Europe', code: '+49', flag: '🇩🇪', rank: 'Gold', stock: '2,890 available', price: 0.078, routes: ['EU Clean', 'Fast SMS'] },
+        { id: 'fr', name: 'France', region: 'Europe', code: '+33', flag: '🇫🇷', rank: 'Gold', stock: '2,740 available', price: 0.068, routes: ['FR Direct', 'Clean Carrier'] },
+        { id: 'nl', name: 'Netherlands', region: 'Europe', code: '+31', flag: '🇳🇱', rank: 'Gold', stock: '2,350 available', price: 0.066, routes: ['NL Clean', 'Priority SMS'] },
+        { id: 'es', name: 'Spain', region: 'Europe', code: '+34', flag: '🇪🇸', rank: 'Silver', stock: '3,120 available', price: 0.048, routes: ['ES Standard', 'Fast Delivery'] },
+        { id: 'it', name: 'Italy', region: 'Europe', code: '+39', flag: '🇮🇹', rank: 'Silver', stock: '2,980 available', price: 0.05, routes: ['IT Direct', 'Clean Route'] },
+        { id: 'pl', name: 'Poland', region: 'Europe', code: '+48', flag: '🇵🇱', rank: 'Silver', stock: '4,020 available', price: 0.036, routes: ['PL Direct', 'Standard Route'] },
+        { id: 'ro', name: 'Romania', region: 'Europe', code: '+40', flag: '🇷🇴', rank: 'Bronze', stock: '3,410 available', price: 0.026, routes: ['RO Economy', 'Standard Route'] },
+        { id: 'se', name: 'Sweden', region: 'Europe', code: '+46', flag: '🇸🇪', rank: 'Gold', stock: '1,840 available', price: 0.064, routes: ['SE Clean', 'Direct SMS'] },
+        { id: 'no', name: 'Norway', region: 'Europe', code: '+47', flag: '🇳🇴', rank: 'Gold', stock: '1,520 available', price: 0.082, routes: ['NO Clean', 'Priority SMS'] },
+        { id: 'ch', name: 'Switzerland', region: 'Europe', code: '+41', flag: '🇨🇭', rank: 'Gold', stock: '1,490 available', price: 0.088, routes: ['CH Premium', 'Clean Route'] },
+        { id: 'ua', name: 'Ukraine', region: 'Europe', code: '+380', flag: '🇺🇦', rank: 'Silver', stock: '3,870 available', price: 0.029, routes: ['UA Direct', 'Backup Route'] },
+
+        // South America
+        { id: 'br', name: 'Brazil', region: 'South America', code: '+55', flag: '🇧🇷', rank: 'Bronze', stock: '5,430 available', price: 0.024, routes: ['Standard BR', 'Economy'] },
+        { id: 'ar', name: 'Argentina', region: 'South America', code: '+54', flag: '🇦🇷', rank: 'Silver', stock: '3,890 available', price: 0.033, routes: ['AR Direct', 'Standard Route'] },
+        { id: 'co', name: 'Colombia', region: 'South America', code: '+57', flag: '🇨🇴', rank: 'Silver', stock: '3,620 available', price: 0.031, routes: ['CO Direct', 'Backup Route'] },
+        { id: 'cl', name: 'Chile', region: 'South America', code: '+56', flag: '🇨🇱', rank: 'Silver', stock: '2,540 available', price: 0.044, routes: ['CL Clean', 'Standard Route'] },
+        { id: 'pe', name: 'Peru', region: 'South America', code: '+51', flag: '🇵🇪', rank: 'Bronze', stock: '2,910 available', price: 0.025, routes: ['PE Standard', 'Economy'] },
+
+        // Africa
+        { id: 'ng', name: 'Nigeria', region: 'Africa', code: '+234', flag: '🇳🇬', rank: 'Silver', stock: '6,480 available', price: 0.028, routes: ['NG Direct', 'Fast Delivery'] },
+        { id: 'eg', name: 'Egypt', region: 'Africa', code: '+20', flag: '🇪🇬', rank: 'Silver', stock: '5,190 available', price: 0.032, routes: ['EG Direct', 'Standard Route'] },
+        { id: 'za', name: 'South Africa', region: 'Africa', code: '+27', flag: '🇿🇦', rank: 'Silver', stock: '3,740 available', price: 0.045, routes: ['ZA Clean', 'Direct SMS'] },
+        { id: 'ke', name: 'Kenya', region: 'Africa', code: '+254', flag: '🇰🇪', rank: 'Bronze', stock: '4,120 available', price: 0.021, routes: ['KE Standard', 'Backup Route'] },
+        { id: 'gh', name: 'Ghana', region: 'Africa', code: '+233', flag: '🇬🇭', rank: 'Bronze', stock: '2,860 available', price: 0.023, routes: ['GH Standard', 'Economy'] },
+        { id: 'ma', name: 'Morocco', region: 'Africa', code: '+212', flag: '🇲🇦', rank: 'Silver', stock: '2,630 available', price: 0.035, routes: ['MA Direct', 'Standard Route'] },
+        { id: 'tz', name: 'Tanzania', region: 'Africa', code: '+255', flag: '🇹🇿', rank: 'Bronze', stock: '2,240 available', price: 0.019, routes: ['TZ Economy', 'Backup Route'] },
+
+        // Oceania
+        { id: 'au', name: 'Australia', region: 'Oceania', code: '+61', flag: '🇦🇺', rank: 'Gold', stock: '3,180 available', price: 0.086, routes: ['AU Clean', 'Priority SMS'] },
+        { id: 'nz', name: 'New Zealand', region: 'Oceania', code: '+64', flag: '🇳🇿', rank: 'Gold', stock: '1,690 available', price: 0.074, routes: ['NZ Direct', 'Clean Carrier'] },
+        { id: 'fj', name: 'Fiji', region: 'Oceania', code: '+679', flag: '🇫🇯', rank: 'Bronze', stock: '940 available', price: 0.046, routes: ['FJ Standard', 'Backup Route'] },
+      ];
+
+      // Official deposit channels: Binance, bKash, Nagad, Rocket
+      const PAYMENT_METHODS = {
+        binance: {
+          id: 'binance',
+          name: 'Binance',
+          badge: 'BN',
+          badgeStyle: 'bg-gold-400 text-obsidian-950',
+          accountLabel: 'Binance UID',
+          accountValue: '824939921',
+          sampleTrx: 'TXN9847210B',
+          hint: 'Binance TrxID / Order ref: 8–16 alphanumeric characters (e.g., TXN9847210B). Random text is rejected.',
+          note: 'Send exact amount to Binance UID 824939921 and enter a valid transaction reference below.',
+        },
+        bkash: {
+          id: 'bkash',
+          name: 'bKash',
+          badge: 'bK',
+          badgeStyle: 'bg-pink-600 text-white',
+          accountLabel: 'bKash Number',
+          accountValue: '01907213466',
+          sampleTrx: 'BKS8H4K29M',
+          hint: 'bKash TrxID: 8–12 uppercase letters & digits (e.g., BKS8H4K29M). Random words or symbols are rejected.',
+          note: 'Send payment to bKash 01907213466 and enter the exact bKash TrxID for verification.',
+        },
+        nagad: {
+          id: 'nagad',
+          name: 'Nagad',
+          badge: 'NG',
+          badgeStyle: 'bg-orange-500 text-white',
+          accountLabel: 'Nagad Number',
+          accountValue: '01907213466',
+          sampleTrx: 'NGD7492018A',
+          hint: 'Nagad TrxID: 8–14 alphanumeric characters (e.g., NGD7492018A). Random gibberish is rejected.',
+          note: 'Send payment to Nagad 01907213466 and submit your valid Nagad TrxID below.',
+        },
+        rocket: {
+          id: 'rocket',
+          name: 'Rocket',
+          badge: 'RK',
+          badgeStyle: 'bg-indigoLux-600 text-white',
+          accountLabel: 'Rocket Number',
+          accountValue: '01311311085',
+          sampleTrx: 'RKT58291047',
+          hint: 'Rocket TrxID: 8–14 alphanumeric characters (e.g., RKT58291047). Invalid strings are rejected.',
+          note: 'Send payment to Rocket 01311311085 and submit your valid Rocket TrxID below.',
+        },
+      };
+
+      // Application state (balance remains 0.00 $ on client side)
+      const AUTH_STORAGE_KEY = 'team_mail_team_number_auth_v1';
+
+      function loadPersistedAuth() {
+        try {
+          if (typeof localStorage === 'undefined') {
+            return { accounts: [], currentUser: null };
+          }
+          const raw = localStorage.getItem(AUTH_STORAGE_KEY);
+          if (!raw) return { accounts: [], currentUser: null };
+          const parsed = JSON.parse(raw);
+          return {
+            accounts: Array.isArray(parsed.accounts) ? parsed.accounts : [],
+            currentUser: parsed.currentUser && typeof parsed.currentUser === 'object' ? parsed.currentUser : null,
+          };
+        } catch (e) {
+          return { accounts: [], currentUser: null };
+        }
+      }
+
+      const initialAuth = loadPersistedAuth();
+
+      const state = {
+        balance: 0.0,
+        mainTab: 'numbers',
+        selectedServiceId: 'telegram',
+        selectedEmailId: 'gmail',
+        serviceSearch: '',
+        rank: 'All',
+        countrySearch: '',
+        depositMethod: 'binance',
+        depositAmount: 10,
+        submittedTrxSet: new Set(),
+        receipts: [],
+        authMode: 'login',
+        prefillLoginName: '',
+        currentUser: initialAuth.currentUser,
+        registeredAccounts: initialAuth.accounts,
+      };
+
+      function persistAuthState() {
+        try {
+          if (typeof localStorage === 'undefined') return;
+          localStorage.setItem(
+            AUTH_STORAGE_KEY,
+            JSON.stringify({
+              accounts: state.registeredAccounts,
+              currentUser: state.currentUser,
+            })
+          );
+        } catch (e) {}
+      }
+
+      let toastTimer = null;
+
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function showToast(message, type) {
+        const banner = document.getElementById('toast-banner');
+        const inner = document.getElementById('toast-inner');
+        const msgEl = document.getElementById('toast-message');
+        if (!banner || !inner || !msgEl) return;
+
+        msgEl.textContent = message;
+        inner.className = 'px-4 py-3 rounded-xl shadow-2xl border text-xs sm:text-sm font-medium flex items-center justify-between gap-3 ';
+        if (type === 'error') {
+          inner.className += 'bg-red-950 text-red-100 border-red-500/50';
+        } else if (type === 'warn') {
+          inner.className += 'bg-obsidian-800 text-gold-400 border-gold-400/50';
+        } else {
+          inner.className += 'bg-obsidian-800 text-emeraldLux-400 border-emeraldLux-400/40';
+        }
+
+        banner.classList.remove('hidden');
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          banner.classList.add('hidden');
+        }, 3200);
+      }
+
+      function getActiveService() {
+        return SERVICES.find(function (s) { return s.id === state.selectedServiceId; }) || SERVICES[0];
+      }
+
+      function getActiveEmail() {
+        return EMAIL_PROVIDERS.find(function (e) { return e.id === state.selectedEmailId; }) || EMAIL_PROVIDERS[0];
+      }
+
+      function renderHeaderBalance() {
+        state.balance = 0.0;
+        const pill = document.getElementById('header-balance-pill');
+        if (pill) {
+          pill.textContent = Number(state.balance).toFixed(2) + ' $';
+        }
+      }
+
+      function renderRankPills() {
+        const pills = document.querySelectorAll('.rank-pill');
+        pills.forEach(function (pill) {
+          const r = pill.getAttribute('data-rank');
+          const active = r === state.rank;
+          pill.className =
+            'rank-pill px-3.5 py-1.5 rounded-full text-xs font-bold transition cursor-pointer ' +
+            (active
+              ? 'bg-gradient-to-r from-indigoLux-500 to-indigoLux-600 text-white shadow-sm'
+              : 'bg-obsidian-800 text-slate-300 border border-slate-700/80 hover:border-gold-400/50');
+        });
+      }
+
+      function renderCountries() {
+        const listEl = document.getElementById('countries-list');
+        const countBadge = document.getElementById('route-count-badge');
+        const step3Title = document.getElementById('step3-title');
+        const step3Sub = document.getElementById('step3-subtitle');
+        if (!listEl) return;
+
+        const q = state.countrySearch.trim().toLowerCase();
+        const filtered = COUNTRIES.filter(function (c) {
+          const rankOk = state.rank === 'All' || c.rank === state.rank;
+          const searchOk =
+            !q ||
+            c.name.toLowerCase().includes(q) ||
+            c.region.toLowerCase().includes(q) ||
+            c.code.toLowerCase().includes(q) ||
+            c.rank.toLowerCase().includes(q);
+          return rankOk && searchOk;
+        });
+
+        if (countBadge) {
+          countBadge.textContent = filtered.length + (filtered.length === 1 ? ' country' : ' countries');
+        }
+
+        if (filtered.length === 0) {
+          listEl.innerHTML = '<div class="py-6 text-center text-xs sm:text-sm text-slate-400 glass-sub rounded-xl">No country matches your current filter or search.</div>';
+          return;
+        }
+
+        const activeTargetLabel = state.mainTab === 'emails'
+          ? getActiveEmail().name
+          : getActiveService().name;
+
+        if (step3Title) {
+          step3Title.textContent = activeTargetLabel + (state.mainTab === 'emails' ? ' e-mail routes' : ' numbers');
+        }
+        if (step3Sub) {
+          step3Sub.textContent = 'Buy ' + activeTargetLabel + ' — Choose a country route and click Buy (Max $0.10)';
+        }
+
+        listEl.innerHTML = filtered.map(function (c) {
+          const cappedPrice = Math.min(Number(c.price), 0.1);
+          const routeOptions = c.routes.map(function (rt) {
+            return '<option value="' + escapeHtml(rt) + '">' + escapeHtml(rt) + '</option>';
+          }).join('');
+
+          return (
+            '<div class="country-row glass-sub p-3.5 rounded-xl hover:border-gold-400/40 transition flex flex-col sm:flex-row sm:items-center justify-between gap-3">' +
+            '<div class="flex items-center gap-3 min-w-0">' +
+            '<span class="text-2xl leading-none shrink-0" aria-hidden="true">' + escapeHtml(c.flag) + '</span>' +
+            '<div class="min-w-0">' +
+            '<div class="flex flex-wrap items-center gap-1.5">' +
+            '<span class="text-sm font-extrabold text-white">' + escapeHtml(c.name) + '</span>' +
+            '<span class="text-[11px] font-mono text-slate-400">' + escapeHtml(c.code) + '</span>' +
+            '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigoLux-500/15 text-indigoLux-400 border border-indigoLux-400/30">' + escapeHtml(c.rank) + '</span>' +
+            '<span class="text-[11px] text-slate-400">• ' + escapeHtml(c.region) + '</span>' +
+            '</div>' +
+            '<div class="text-xs font-mono text-slate-400 mt-0.5">' + escapeHtml(c.stock) + ' • <span class="text-slate-200 font-semibold">' + escapeHtml(activeTargetLabel) + '</span></div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="flex items-center justify-between sm:justify-end gap-2.5 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-800">' +
+            '<select aria-label="Select route for ' + escapeHtml(c.name) + '" class="country-route-select px-2.5 py-1.5 rounded-xl border border-slate-700 bg-obsidian-900 text-xs font-semibold text-slate-200 focus:border-gold-400 focus:outline-none">' +
+            routeOptions +
+            '</select>' +
+            '<span class="font-mono font-extrabold text-sm text-emeraldLux-400">$' + cappedPrice.toFixed(2) + '</span>' +
+            '<button type="button" data-action="buy-route" data-country-id="' + escapeHtml(c.id) + '" ' +
+            'class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-gold-500 text-obsidian-950 font-extrabold text-xs transition cursor-pointer shadow-sm whitespace-nowrap">' +
+            'Buy ' + escapeHtml(activeTargetLabel) +
+            '</button>' +
+            '</div>' +
+            '</div>'
+          );
+        }).join('');
+      }
+
+      function renderTabs() {
+        const numBtn = document.getElementById('tab-numbers');
+        const mailBtn = document.getElementById('tab-emails');
+        const servicesGrid = document.getElementById('services-grid');
+        const emailsGrid = document.getElementById('emails-grid');
+        const step1Title = document.getElementById('step1-title');
+        const step1Sub = document.getElementById('step1-subtitle');
+        const step3Title = document.getElementById('step3-title');
+        const badge = document.getElementById('selected-item-badge');
+        const searchInput = document.getElementById('service-search-input');
+
+        const isNumbers = state.mainTab === 'numbers';
+
+        if (numBtn && mailBtn) {
+          numBtn.className = isNumbers
+            ? 'py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition cursor-pointer bg-gradient-to-r from-emeraldLux-500 to-emeraldLux-600 text-obsidian-950 shadow-md shadow-emerald-500/20'
+            : 'py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition cursor-pointer bg-transparent text-slate-300 hover:bg-obsidian-800/80';
+
+          mailBtn.className = !isNumbers
+            ? 'py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition cursor-pointer bg-gradient-to-r from-emeraldLux-500 to-emeraldLux-600 text-obsidian-950 shadow-md shadow-emerald-500/20'
+            : 'py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition cursor-pointer bg-transparent text-slate-300 hover:bg-obsidian-800/80';
+        }
+
+        if (isNumbers) {
+          if (step1Title) step1Title.textContent = 'Choose a service';
+          if (step1Sub) step1Sub.textContent = 'Select a social media, messaging, or popular app tile below';
+          if (step3Title) step3Title.textContent = getActiveService().name + ' numbers';
+          if (badge) badge.textContent = getActiveService().name;
+          if (searchInput) searchInput.placeholder = 'Search Telegram, WhatsApp, Instagram, TikTok, Discord...';
+          if (servicesGrid) servicesGrid.classList.remove('hidden');
+          if (emailsGrid) {
+            emailsGrid.classList.add('hidden');
+            emailsGrid.classList.remove('grid');
+          }
+        } else {
+          if (step1Title) step1Title.textContent = 'Choose an e-mail provider';
+          if (step1Sub) step1Sub.textContent = 'Select Gmail, Hotmail, iCloud Mail, Outlook, Proton Mail, Yahoo Mail, GMX Mail, or Zoho Mail';
+          if (step3Title) step3Title.textContent = getActiveEmail().name + ' e-mail routes';
+          if (badge) badge.textContent = getActiveEmail().name;
+          if (searchInput) searchInput.placeholder = 'Search Gmail, Hotmail, iCloud Mail, Outlook, Proton Mail...';
+          if (servicesGrid) servicesGrid.classList.add('hidden');
+          if (emailsGrid) {
+            emailsGrid.classList.remove('hidden');
+            emailsGrid.classList.add('grid');
+          }
+        }
+      }
+
+      function renderServicesGrid() {
+        const grid = document.getElementById('services-grid');
+        if (!grid) return;
+
+        const q = state.serviceSearch.trim().toLowerCase();
+        const filtered = SERVICES.filter(function (item) {
+          return !q || item.name.toLowerCase().includes(q) || item.code.toLowerCase().includes(q);
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '<div class="col-span-full py-6 text-center text-xs sm:text-sm text-slate-400 glass-sub rounded-xl">No app matches "' + escapeHtml(state.serviceSearch) + '".</div>';
+          return;
+        }
+
+        grid.innerHTML = filtered.map(function (item) {
+          const selected = item.id === state.selectedServiceId;
+          return (
+            '<button type="button" data-action="select-service" data-service-id="' + escapeHtml(item.id) + '" ' +
+            'class="p-3 rounded-xl flex flex-col items-center justify-center gap-2 transition cursor-pointer ' +
+            (selected
+              ? 'border-2 border-gold-400 bg-gold-500/12 shadow-md shadow-amber-500/10'
+              : 'glass-sub hover:border-indigoLux-400/50') + '">' +
+            '<span class="service-icon w-10 h-10 rounded-xl flex items-center justify-center ' + escapeHtml(item.bg) + '" aria-hidden="true">' + getServiceSvg(item.id) + '</span>' +
+            '<span class="text-xs font-bold text-slate-100 text-center leading-tight">' + escapeHtml(item.name) + '</span>' +
+            '</button>'
+          );
+        }).join('');
+      }
+
+      function renderEmailsGrid() {
+        const grid = document.getElementById('emails-grid');
+        if (!grid) return;
+
+        const q = state.serviceSearch.trim().toLowerCase();
+        const filtered = EMAIL_PROVIDERS.filter(function (item) {
+          return (
+            !q ||
+            item.name.toLowerCase().includes(q) ||
+            item.address.toLowerCase().includes(q) ||
+            item.rank.toLowerCase().includes(q)
+          );
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '<div class="col-span-full py-6 text-center text-xs sm:text-sm text-slate-400 glass-sub rounded-xl">No e-mail provider matches "' + escapeHtml(state.serviceSearch) + '".</div>';
+          return;
+        }
+
+        grid.innerHTML = filtered.map(function (item) {
+          const selected = item.id === state.selectedEmailId;
+          return (
+            '<div role="button" tabindex="0" data-action="select-email" data-email-id="' + escapeHtml(item.id) + '" ' +
+            'class="text-left p-4 rounded-xl transition cursor-pointer ' +
+            (selected
+              ? 'border-2 border-gold-400 bg-gold-500/10'
+              : 'glass-sub hover:border-indigoLux-400/45') + '">' +
+            '<div class="flex items-center justify-between gap-2">' +
+            '<span class="text-sm font-extrabold text-white">' + escapeHtml(item.name) + '</span>' +
+            '<span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigoLux-500/15 text-indigoLux-400 border border-indigoLux-400/30">' + escapeHtml(item.rank) + '</span>' +
+            '</div>' +
+            '<div class="text-xs font-mono text-slate-400 mt-1">' + escapeHtml(item.address) + '</div>' +
+            '<div class="mt-3 pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs">' +
+            '<span class="font-mono text-slate-400">' + escapeHtml(item.stock) + '</span>' +
+            '<span class="font-mono font-extrabold text-emeraldLux-400">$' + Number(item.price).toFixed(2) + '</span>' +
+            '</div>' +
+            '<div class="mt-3 pt-2.5 border-t border-slate-800/80 flex items-center justify-between gap-2">' +
+            '<span class="text-[11px] font-mono text-slate-400">Balance: 0.00 $</span>' +
+            '<button type="button" data-action="buy-email" data-email-id="' + escapeHtml(item.id) + '" ' +
+            'class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-emeraldLux-500 to-emeraldLux-600 hover:from-emeraldLux-400 hover:to-emeraldLux-500 text-obsidian-950 font-extrabold text-xs transition cursor-pointer shadow-sm">' +
+            'Buy ' + escapeHtml(item.name) +
+            '</button>' +
+            '</div>' +
+            '</div>'
+          );
+        }).join('');
+      }
+
+      function renderDepositModal() {
+        const cardsWrap = document.getElementById('payment-method-cards');
+        const labelEl = document.getElementById('active-method-label');
+        const valueEl = document.getElementById('active-method-value');
+        const noteEl = document.getElementById('active-method-note');
+        const hintEl = document.getElementById('trxid-format-hint');
+
+        const active = PAYMENT_METHODS[state.depositMethod] || PAYMENT_METHODS.binance;
+
+        if (cardsWrap) {
+          const order = ['binance', 'bkash', 'nagad', 'rocket'];
+          cardsWrap.innerHTML = order.map(function (key) {
+            const m = PAYMENT_METHODS[key];
+            const isSelected = key === active.id;
+            return (
+              '<button type="button" data-action="select-payment-method" data-method="' + escapeHtml(m.id) + '" ' +
+              'class="p-2.5 rounded-xl flex items-center gap-2 transition cursor-pointer text-left ' +
+              (isSelected
+                ? 'border-2 border-gold-400 bg-gold-500/15 shadow-sm'
+                : 'glass-sub hover:border-slate-500') + '">' +
+              '<span class="w-8 h-8 rounded-lg font-mono font-extrabold text-xs flex items-center justify-center shrink-0 ' + escapeHtml(m.badgeStyle) + '">' + escapeHtml(m.badge) + '</span>' +
+              '<span class="text-xs font-extrabold text-white truncate">' + escapeHtml(m.name) + '</span>' +
+              '</button>'
+            );
+          }).join('');
+        }
+
+        if (labelEl) labelEl.textContent = active.accountLabel;
+        if (valueEl) valueEl.textContent = active.accountValue;
+        if (noteEl) noteEl.textContent = active.note;
+        if (hintEl) hintEl.textContent = active.hint;
+
+        const chips = document.querySelectorAll('.amount-chip');
+        chips.forEach(function (chip) {
+          const chipVal = Number(chip.getAttribute('data-amount'));
+          const activeChip = Number(state.depositAmount) === chipVal;
+          chip.className =
+            'amount-chip py-2 rounded-xl text-xs font-mono font-bold border transition cursor-pointer ' +
+            (activeChip
+              ? 'bg-gold-500 text-obsidian-950 border-gold-400'
+              : 'bg-obsidian-800 text-slate-300 border-slate-700 hover:border-gold-400');
+        });
+      }
+
+      function renderReceipts() {
+        const listEl = document.getElementById('receipts-list');
+        const countEl = document.getElementById('receipt-count-badge');
+        if (countEl) {
+          countEl.textContent = state.receipts.length + ' pending';
+        }
+        if (!listEl) return;
+
+        if (state.receipts.length === 0) {
+          listEl.innerHTML = '<div class="p-3 rounded-xl bg-obsidian-900/70 border border-dashed border-slate-700 text-center text-xs text-slate-500">No TrxID receipts submitted yet.</div>';
+          return;
+        }
+
+        listEl.innerHTML = state.receipts.map(function (r) {
+          return (
+            '<div class="p-3 rounded-xl bg-gold-500/10 border border-gold-400/30 flex items-center justify-between gap-2 text-xs">' +
+            '<div class="min-w-0">' +
+            '<div class="font-bold text-white">' + escapeHtml(r.methodName) + ' • <span class="font-mono text-emeraldLux-400">$' + escapeHtml(r.amount) + '</span></div>' +
+            '<div class="font-mono text-[11px] text-slate-300 truncate">TrxID: ' + escapeHtml(r.trxId) + '</div>' +
+            '</div>' +
+            '<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-gold-500/20 text-gold-400 border border-gold-400/40 shrink-0">Pending Review</span>' +
+            '</div>'
+          );
+        }).join('');
+      }
+
+      function openDepositModal() {
+        const modal = document.getElementById('deposit-modal');
+        const errBox = document.getElementById('trxid-error-box');
+        if (errBox) {
+          errBox.classList.add('hidden');
+          errBox.textContent = '';
+        }
+        renderDepositModal();
+        renderReceipts();
+        if (modal) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        }
+      }
+
+      function closeDepositModal() {
+        const modal = document.getElementById('deposit-modal');
+        if (modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      }
+
+      function clearAuthFeedback() {
+        const box = document.getElementById('auth-feedback-box');
+        if (!box) return;
+        box.classList.add('hidden');
+        box.textContent = '';
+      }
+
+      function showAuthFeedback(msg, isError) {
+        const box = document.getElementById('auth-feedback-box');
+        if (!box) return;
+        box.textContent = msg;
+        box.className =
+          'p-3 rounded-xl text-xs font-medium leading-relaxed border ' +
+          (isError
+            ? 'bg-red-950/75 border-red-500/45 text-red-200'
+            : 'bg-emeraldLux-500/15 border-emeraldLux-400/45 text-emeraldLux-300');
+        box.classList.remove('hidden');
+        showToast(msg, isError ? 'error' : 'info');
+      }
+
+      function handleLoginSubmit(e) {
+        e.preventDefault();
+        clearAuthFeedback();
+        const nameInput = document.getElementById('login-name-input');
+        const passInput = document.getElementById('login-password-input');
+        const nameVal = nameInput ? nameInput.value.trim() : '';
+        const password = passInput ? passInput.value : '';
+
+        if (!nameVal || nameVal.length < 2) {
+          showAuthFeedback('Please enter your Name (at least 2 characters) to log in.', true);
+          return;
+        }
+        if (!password || password.length < 6) {
+          showAuthFeedback('Please enter your Password (at least 6 characters) to log in.', true);
+          return;
+        }
+
+        const matched = state.registeredAccounts.find(function (acc) {
+          return acc.name.toLowerCase() === nameVal.toLowerCase();
+        });
+
+        if (matched && matched.password !== password) {
+          showAuthFeedback('Incorrect password for "' + matched.name + '". Please try again.', true);
+          return;
+        }
+
+        const finalName = matched ? matched.name : nameVal;
+        const finalNumber = matched ? matched.number : '';
+        const handleVal = finalName.length > 10 ? finalName.slice(0, 10) : finalName;
+
+        renderHeaderBalance();
+        state.prefillLoginName = '';
+        state.currentUser = {
+          name: finalName,
+          handle: handleVal,
+          number: finalNumber,
+        };
+        persistAuthState();
+        if (passInput) passInput.value = '';
+        renderAuthModal();
+        closeAuthModal();
+        const mainEl = document.querySelector('main');
+        if (mainEl && typeof mainEl.scrollIntoView === 'function') {
+          mainEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        showToast('Welcome back, ' + finalName + '! Balance remains 0.00 $.');
+      }
+
+      function handleRegisterSubmit(e) {
+        e.preventDefault();
+        clearAuthFeedback();
+        const nameInput = document.getElementById('register-name-input');
+        const numInput = document.getElementById('register-number-input');
+        const passInput = document.getElementById('register-password-input');
+
+        const nameVal = nameInput ? nameInput.value.trim() : '';
+        const numberVal = numInput ? numInput.value.trim() : '';
+        const passVal = passInput ? passInput.value : '';
+        const cleanDigits = numberVal.replace(/[^\d]/g, '');
+
+        if (!nameVal || nameVal.length < 2) {
+          showAuthFeedback('Please enter your Name (at least 2 characters).', true);
+          return;
+        }
+        if (!numberVal || cleanDigits.length < 7 || !/^[+]?[\d\s\-()]{7,20}$/.test(numberVal)) {
+          showAuthFeedback('Please enter a valid Number (at least 7 digits).', true);
+          return;
+        }
+        if (!passVal || passVal.length < 6) {
+          showAuthFeedback('Password must be at least 6 characters long.', true);
+          return;
+        }
+
+        const existingByName = state.registeredAccounts.find(function (acc) {
+          return acc.name.toLowerCase() === nameVal.toLowerCase();
+        });
+        if (existingByName) {
+          existingByName.number = numberVal;
+          existingByName.password = passVal;
+        } else {
+          state.registeredAccounts.push({
+            name: nameVal,
+            number: numberVal,
+            password: passVal,
+          });
+        }
+
+        renderHeaderBalance();
+        persistAuthState();
+
+        // Transition strictly to the dedicated Login view with Name pre-filled
+        state.prefillLoginName = nameVal;
+        state.authMode = 'login';
+        renderAuthModal();
+
+        showAuthFeedback(
+          'Registration successful for "' + nameVal + '" (' + numberVal + '). Please enter your Password to log in.',
+          false
+        );
+
+        const loginPassInput = document.getElementById('login-password-input');
+        if (loginPassInput) {
+          loginPassInput.focus();
+        }
+      }
+
+      function renderAuthModal() {
+        const titleEl = document.getElementById('auth-modal-title');
+        const subEl = document.getElementById('auth-modal-subtitle');
+        const loginTab = document.getElementById('auth-tab-login');
+        const regTab = document.getElementById('auth-tab-register');
+        const viewSlot = document.getElementById('auth-view-slot');
+        const loginTpl = document.getElementById('login-view-template');
+        const regTpl = document.getElementById('register-view-template');
+        const sessionBanner = document.getElementById('auth-session-banner');
+        const sessionUser = document.getElementById('auth-session-user');
+        const headerLoginBtn = document.getElementById('header-login-btn');
+        const headerRegBtn = document.getElementById('header-register-btn');
+        const dashboardBadge = document.getElementById('dashboard-account-badge');
+
+        const isRegister = state.authMode === 'register';
+
+        if (titleEl) {
+          titleEl.textContent = isRegister ? 'Create Account' : 'Account Login';
+        }
+        if (subEl) {
+          subEl.textContent = isRegister
+            ? 'Register for Team Mail 📬 & Team Number'
+            : 'Login to Team Mail 📬 & Team Number';
+        }
+
+        if (loginTab && regTab) {
+          loginTab.className =
+            'py-2 px-3 rounded-lg font-bold text-xs sm:text-sm transition cursor-pointer ' +
+            (!isRegister
+              ? 'bg-indigoLux-500 text-white shadow-sm'
+              : 'text-slate-400 hover:text-white');
+          regTab.className =
+            'py-2 px-3 rounded-lg font-bold text-xs sm:text-sm transition cursor-pointer ' +
+            (isRegister
+              ? 'bg-gold-500 text-obsidian-950 shadow-sm'
+              : 'text-slate-400 hover:text-white');
+        }
+
+        // Render strictly ONE single form view at a time into #auth-view-slot
+        if (viewSlot) {
+          viewSlot.innerHTML = '';
+          const activeTpl = isRegister ? regTpl : loginTpl;
+          if (activeTpl && activeTpl.content && activeTpl.content.firstElementChild) {
+            const clonedForm = activeTpl.content.firstElementChild.cloneNode(true);
+            viewSlot.appendChild(clonedForm);
+
+            if (isRegister) {
+              clonedForm.addEventListener('submit', handleRegisterSubmit);
+            } else {
+              clonedForm.addEventListener('submit', handleLoginSubmit);
+              const loginNameEl = clonedForm.querySelector('#login-name-input');
+              if (loginNameEl && state.prefillLoginName) {
+                loginNameEl.value = state.prefillLoginName;
+              }
+            }
+          }
+        }
+
+        if (sessionBanner && sessionUser) {
+          if (state.currentUser) {
+            const numPart = state.currentUser.number ? ' • ' + state.currentUser.number : '';
+            sessionUser.textContent = state.currentUser.name + numPart;
+            sessionBanner.classList.remove('hidden');
+          } else {
+            sessionUser.textContent = '';
+            sessionBanner.classList.add('hidden');
+          }
+        }
+
+        if (headerLoginBtn && headerRegBtn) {
+          if (state.currentUser) {
+            headerLoginBtn.textContent = 'Account';
+            headerRegBtn.classList.add('hidden');
+            if (dashboardBadge) {
+              dashboardBadge.textContent = '● ' + state.currentUser.handle;
+              dashboardBadge.title = 'Signed in as ' + state.currentUser.name;
+              dashboardBadge.classList.remove('hidden');
+            }
+          } else {
+            headerLoginBtn.textContent = 'Login';
+            headerRegBtn.classList.remove('hidden');
+            if (dashboardBadge) {
+              dashboardBadge.textContent = '';
+              dashboardBadge.classList.add('hidden');
+            }
+          }
+        }
+      }
+
+      function openAuthModal(mode) {
+        if (mode === 'login' || mode === 'register') {
+          state.authMode = mode;
+        }
+        clearAuthFeedback();
+        renderAuthModal();
+        const modal = document.getElementById('auth-modal');
+        if (modal) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        }
+      }
+
+      function closeAuthModal() {
+        const modal = document.getElementById('auth-modal');
+        if (modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      }
+
+      function clearTrxError() {
+        const errBox = document.getElementById('trxid-error-box');
+        if (!errBox) return;
+        errBox.classList.add('hidden');
+        errBox.textContent = '';
+      }
+
+      // Strict Transaction ID validation rejecting random or malformed IDs
+      function validateTransactionId(rawVal, methodId) {
+        const trx = String(rawVal || '').trim().toUpperCase();
+        if (!trx) {
+          return { ok: false, reason: 'Please enter a Transaction ID (TrxID).' };
+        }
+        if (/\s/.test(trx)) {
+          return { ok: false, reason: 'Transaction ID cannot contain spaces.' };
+        }
+        if (!/^[A-Z0-9]{8,16}$/.test(trx)) {
+          return { ok: false, reason: 'Invalid TrxID format. Use 8–16 alphanumeric characters without symbols.' };
+        }
+        if (!/[A-Z]/.test(trx) || !/[0-9]/.test(trx)) {
+          return { ok: false, reason: 'Invalid TrxID. A valid transaction ID must include both letters and numbers.' };
+        }
+        if (/^(.)\1+$/.test(trx)) {
+          return { ok: false, reason: 'Invalid TrxID: repeated characters are rejected.' };
+        }
+
+        const lower = trx.toLowerCase();
+        const badPatterns = ['qwerty', 'asdfgh', 'zxcvbn', '12345678', '87654321', 'abcdefg', 'test1234', 'sample12'];
+        for (let i = 0; i < badPatterns.length; i++) {
+          if (lower.indexOf(badPatterns[i]) !== -1) {
+            return { ok: false, reason: 'Invalid TrxID: random or keyboard-sequence text is rejected.' };
+          }
+        }
+
+        const freq = {};
+        let maxFreq = 0;
+        for (let i = 0; i < trx.length; i++) {
+          const ch = trx[i];
+          freq[ch] = (freq[ch] || 0) + 1;
+          if (freq[ch] > maxFreq) maxFreq = freq[ch];
+        }
+        if (maxFreq / trx.length > 0.55) {
+          return { ok: false, reason: 'Invalid TrxID: repetitive or random string rejected.' };
+        }
+
+        if (methodId === 'bkash' && trx.length > 12) {
+          return { ok: false, reason: 'bKash TrxID must be 8–12 characters.' };
+        }
+
+        if (state.submittedTrxSet.has(trx)) {
+          return { ok: false, reason: 'This TrxID has already been submitted.' };
+        }
+
+        return { ok: true, trxId: trx };
+      }
+
+      function copyTextFallback(text) {
+        try {
+          if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+            navigator.clipboard.writeText(text).catch(function () {});
+          }
+        } catch (e) {}
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        } catch (e) {}
+      }
+
+      // Event delegation for interactive actions
+      document.addEventListener('click', function (event) {
+        const actionEl = event.target.closest('[data-action]');
+        if (!actionEl) {
+          const depositModal = document.getElementById('deposit-modal');
+          if (depositModal && event.target === depositModal) {
+            closeDepositModal();
+          }
+          const authModal = document.getElementById('auth-modal');
+          if (authModal && event.target === authModal) {
+            closeAuthModal();
+          }
+          return;
+        }
+
+        const action = actionEl.getAttribute('data-action');
+
+        switch (action) {
+          case 'dismiss-toast': {
+            const banner = document.getElementById('toast-banner');
+            if (banner) banner.classList.add('hidden');
+            break;
+          }
+
+          case 'reset-home': {
+            state.mainTab = 'numbers';
+            state.selectedServiceId = 'telegram';
+            state.serviceSearch = '';
+            state.rank = 'All';
+            state.countrySearch = '';
+            const sInput = document.getElementById('service-search-input');
+            const cInput = document.getElementById('country-search-input');
+            if (sInput) sInput.value = '';
+            if (cInput) cInput.value = '';
+            renderTabs();
+            renderServicesGrid();
+            renderEmailsGrid();
+            renderRankPills();
+            renderCountries();
+            showToast('Reset to Team Mail 📬 & Team Number — Telegram.');
+            break;
+          }
+
+          case 'switch-tab': {
+            const tab = actionEl.getAttribute('data-tab');
+            if (tab === 'numbers' || tab === 'emails') {
+              state.mainTab = tab;
+              renderTabs();
+              if (tab === 'numbers') {
+                renderServicesGrid();
+              } else {
+                renderEmailsGrid();
+              }
+              renderCountries();
+            }
+            break;
+          }
+
+          case 'select-service': {
+            const sid = actionEl.getAttribute('data-service-id');
+            if (sid) {
+              state.selectedServiceId = sid;
+              renderTabs();
+              renderServicesGrid();
+              renderCountries();
+              showToast('Selected ' + getActiveService().name + ' — country section & Buy buttons updated.');
+            }
+            break;
+          }
+
+          case 'select-email': {
+            const eid = actionEl.getAttribute('data-email-id');
+            if (eid) {
+              state.selectedEmailId = eid;
+              renderTabs();
+              renderEmailsGrid();
+              renderCountries();
+              const chosenEmail = getActiveEmail();
+              showToast(
+                'Deposit required for ' + chosenEmail.name + ' ($' + Number(chosenEmail.price).toFixed(2) + '). Balance is 0.00 $.',
+                'warn'
+              );
+              openDepositModal();
+            }
+            break;
+          }
+
+          case 'buy-email': {
+            event.stopPropagation();
+            const eid = actionEl.getAttribute('data-email-id');
+            if (eid) {
+              state.selectedEmailId = eid;
+              renderTabs();
+              renderEmailsGrid();
+              renderCountries();
+            }
+            const emailItem = getActiveEmail();
+            showToast(
+              'Deposit required to buy ' + emailItem.name + ' (' + emailItem.address + ' • $' + Number(emailItem.price).toFixed(2) + '). Balance is 0.00 $.',
+              'warn'
+            );
+            openDepositModal();
+            break;
+          }
+
+          case 'clear-service-search': {
+            state.serviceSearch = '';
+            const input = document.getElementById('service-search-input');
+            if (input) input.value = '';
+            actionEl.classList.add('hidden');
+            if (state.mainTab === 'numbers') renderServicesGrid();
+            else renderEmailsGrid();
+            break;
+          }
+
+          case 'select-rank': {
+            const rankVal = actionEl.getAttribute('data-rank');
+            if (rankVal) {
+              state.rank = rankVal;
+              renderRankPills();
+              renderCountries();
+            }
+            break;
+          }
+
+          case 'buy-route': {
+            const cid = actionEl.getAttribute('data-country-id');
+            const country = COUNTRIES.find(function (c) { return c.id === cid; });
+            if (!country) break;
+            const cappedPrice = Math.min(Number(country.price), 0.1);
+            const targetName = state.mainTab === 'emails'
+              ? getActiveEmail().name
+              : getActiveService().name;
+
+            showToast(
+              'Deposit required to buy ' + targetName + ' (' + country.name + ' • $' + cappedPrice.toFixed(2) + '). Current balance: 0.00 $.',
+              'warn'
+            );
+            openDepositModal();
+            break;
+          }
+
+          case 'toggle-faq': {
+            const item = actionEl.closest('.accordion-item');
+            if (item) {
+              item.classList.toggle('open');
+            }
+            break;
+          }
+
+          case 'open-deposit': {
+            openDepositModal();
+            break;
+          }
+
+          case 'close-deposit': {
+            closeDepositModal();
+            break;
+          }
+
+          case 'open-auth': {
+            const mode = actionEl.getAttribute('data-auth-mode') || 'login';
+            openAuthModal(mode);
+            break;
+          }
+
+          case 'close-auth': {
+            closeAuthModal();
+            break;
+          }
+
+          case 'switch-auth-mode': {
+            const mode = actionEl.getAttribute('data-auth-mode');
+            if (mode === 'login' || mode === 'register') {
+              state.authMode = mode;
+              clearAuthFeedback();
+              renderAuthModal();
+            }
+            break;
+          }
+
+          case 'logout-session': {
+            state.currentUser = null;
+            persistAuthState();
+            renderHeaderBalance();
+            clearAuthFeedback();
+            renderAuthModal();
+            showToast('Signed out. Balance remains 0.00 $.');
+            break;
+          }
+
+          case 'select-payment-method': {
+            const methodKey = actionEl.getAttribute('data-method');
+            if (methodKey && PAYMENT_METHODS[methodKey]) {
+              state.depositMethod = methodKey;
+              clearTrxError();
+              renderDepositModal();
+              const detailsBox = document.getElementById('selected-method-details');
+              if (detailsBox && typeof detailsBox.scrollIntoView === 'function') {
+                detailsBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }
+            }
+            break;
+          }
+
+          case 'copy-method-value': {
+            const active = PAYMENT_METHODS[state.depositMethod] || PAYMENT_METHODS.binance;
+            copyTextFallback(active.accountValue);
+            showToast('Copied ' + active.accountLabel + ': ' + active.accountValue);
+            break;
+          }
+
+          case 'select-amount-chip': {
+            const amt = Number(actionEl.getAttribute('data-amount'));
+            if (amt > 0) {
+              state.depositAmount = amt;
+              const amtInput = document.getElementById('deposit-amount-input');
+              if (amtInput) amtInput.value = String(amt);
+              renderDepositModal();
+            }
+            break;
+          }
+
+          case 'fill-sample-trxid': {
+            const active = PAYMENT_METHODS[state.depositMethod] || PAYMENT_METHODS.binance;
+            const trxInput = document.getElementById('trxid-input');
+            if (trxInput) {
+              trxInput.value = active.sampleTrx;
+              trxInput.focus();
+            }
+            clearTrxError();
+            break;
+          }
+        }
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const sInput = document.getElementById('service-search-input');
+        const cInput = document.getElementById('country-search-input');
+        const amtInput = document.getElementById('deposit-amount-input');
+        const trxInput = document.getElementById('trxid-input');
+        const trxForm = document.getElementById('trxid-form');
+
+        if (sInput) {
+          sInput.addEventListener('input', function () {
+            state.serviceSearch = sInput.value;
+            const clearBtn = document.querySelector('.id-clear-search');
+            if (clearBtn) {
+              if (state.serviceSearch.trim().length > 0) clearBtn.classList.remove('hidden');
+              else clearBtn.classList.add('hidden');
+            }
+            if (state.mainTab === 'numbers') renderServicesGrid();
+            else renderEmailsGrid();
+          });
+        }
+
+        if (cInput) {
+          cInput.addEventListener('input', function () {
+            state.countrySearch = cInput.value;
+            renderCountries();
+          });
+        }
+
+        if (amtInput) {
+          amtInput.addEventListener('input', function () {
+            const val = Number(amtInput.value);
+            if (!Number.isNaN(val) && val > 0) {
+              state.depositAmount = val;
+              renderDepositModal();
+            }
+          });
+        }
+
+        if (trxInput) {
+          trxInput.addEventListener('input', function () {
+            clearTrxError();
+          });
+        }
+
+        if (trxForm) {
+          trxForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            clearTrxError();
+
+            const amtVal = amtInput ? Number(amtInput.value) : Number(state.depositAmount);
+            if (Number.isNaN(amtVal) || amtVal < 1) {
+              const errBox = document.getElementById('trxid-error-box');
+              if (errBox) {
+                errBox.textContent = 'Please enter a valid deposit amount of at least $1.00.';
+                errBox.classList.remove('hidden');
+              }
+              showToast('Enter a valid deposit amount ($1.00+).', 'error');
+              return;
+            }
+
+            const rawTrx = trxInput ? trxInput.value : '';
+            const check = validateTransactionId(rawTrx, state.depositMethod);
+            if (!check.ok) {
+              const errBox = document.getElementById('trxid-error-box');
+              if (errBox) {
+                errBox.textContent = check.reason;
+                errBox.classList.remove('hidden');
+              }
+              showToast(check.reason, 'error');
+              return;
+            }
+
+            const activeMethod = PAYMENT_METHODS[state.depositMethod] || PAYMENT_METHODS.binance;
+            state.submittedTrxSet.add(check.trxId);
+            state.receipts.unshift({
+              methodName: activeMethod.name,
+              amount: amtVal.toFixed(2),
+              trxId: check.trxId,
+            });
+
+            // Never self-credit client-side balance
+            renderHeaderBalance();
+            renderReceipts();
+            if (trxInput) trxInput.value = '';
+            showToast('TrxID ' + check.trxId + ' logged for review. Balance remains 0.00 $.');
+          });
+        }
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') {
+            closeDepositModal();
+            closeAuthModal();
+          }
+        });
+
+        // Initial render
+        renderHeaderBalance();
+        renderAuthModal();
+        renderTabs();
+        renderServicesGrid();
+        renderEmailsGrid();
+        renderRankPills();
+        renderCountries();
+        renderDepositModal();
+        renderReceipts();
+      });
+    })();
+  </script>
+</body>
+</html>
